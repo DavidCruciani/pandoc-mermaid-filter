@@ -2,7 +2,7 @@
 
 Pandoc filter which converts mermaid code blocks to mermaid images.
 
-````
+```
 ```mermaid
 gantt
         dateFormat  YYYY-MM-DD
@@ -20,14 +20,16 @@ gantt
         Create tests for renderer           :2d
         Add to mermaid                      :1d
 ```
-````
+```
 
 ## Usage
 
 Install it with pip:
 
 ```
-pip install pandoc-mermaid-filter
+git clone https://github.com/DavidCruciani/pandoc-mermaid-filter
+cd pandoc-mermaid-filter
+pip install .
 ```
 
 And use it like any other pandoc filter:
@@ -36,17 +38,10 @@ And use it like any other pandoc filter:
 pandoc tests/sample.md -o sample.pdf --filter pandoc-mermaid
 ```
 
-The mermaid binary must be in your `$PATH` or can be set with the
-`MERMAID_BIN` environment variable.
+The mermaid binary must be in your `$PATH` or can be set with the `MERMAID_BIN` environment variable.
 
-By setting the environment variable `PUPPETEER_CFG`, you can pass a custom
-configuration file to `mermaid` (`-p` option).
+
 
 ## But there is ...
 
-There are a few other filters trying to convert mermaid code blocks however
-they all failed for me.
-
-### Troubleshoot
-
-I've had to install the mermaid CLI locally instead of globally. See https://github.com/mermaidjs/mermaid.cli/issues/16
+There are a few other filters trying to convert mermaid code blocks however they all failed for me.
