@@ -30,13 +30,22 @@ cd pandoc-mermaid-filter
 pip install .
 ```
 
+This need mermaid-cli:
+
+```
+npm install --global @mermaid-js/mermaid-cli
+export MERMAID_BIN=/path/to/mermaid/bin
+```
+
+The mermaid binary must be in your `$PATH` or can be set with the `MERMAID_BIN` environment variable.
+
+
+
 And use it like any other pandoc filter:
 
 ```
 pandoc tests/sample.md -o sample.pdf --filter pandoc-mermaid
 ```
-
-The mermaid binary must be in your `$PATH` or can be set with the `MERMAID_BIN` environment variable.
 
 ## But there is ...
 
