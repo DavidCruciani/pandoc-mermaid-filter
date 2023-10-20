@@ -1,8 +1,7 @@
 # pandoc-mermaid-filter
 
-Pandoc filter which converts mermaid code blocks to mermaid images.
+- Pandoc filter which converts mermaid code blocks to mermaid images.
 
-```
 ```mermaid
 gantt
         dateFormat  YYYY-MM-DD
@@ -19,7 +18,6 @@ gantt
         Future task in critical line        :crit, 5d
         Create tests for renderer           :2d
         Add to mermaid                      :1d
-```
 ```
 
 ## Usage
@@ -39,8 +37,6 @@ pandoc tests/sample.md -o sample.pdf --filter pandoc-mermaid
 ```
 
 The mermaid binary must be in your `$PATH` or can be set with the `MERMAID_BIN` environment variable.
-
-
 
 ## But there is ...
 
