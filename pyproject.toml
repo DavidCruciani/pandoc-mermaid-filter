@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "pandoc-mermaid-filter"
+version = "0.1.0"
+description = ""
+authors = ["David Cruciani <david.cruciani@circl.lu>"]
+readme = "README.md"
+packages = [{include = "pandoc_mermaid_filter"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandocfilters = "^1.5.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+pandoc-mermaid = 'pandoc_mermaid_filter.pandoc_mermaid_filter:main'
